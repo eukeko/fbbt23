@@ -1,0 +1,314 @@
+/* @import url("./styles/header.css"); */
+/* @import url("./styles/banner.css"); */
+/* @import url("./styles/carrossel.css"); */
+/* @import url("./styles/topicos.css"); */
+/* @import url("./styles/contato.css"); */
+/* @import url("./styles/rodape.css"); */
+@import url("../styles/materialize.css"); 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins:wght@300;400;500;700&display=swap');
+
+:root {
+	 --cor-de-fundo: #EBECEE; 
+	 --branco: #FFFFFF; 
+	 --laranja: #EB9B00;
+	 --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%); 
+	 --azul: #002F52; 
+	 --cinza: #474646; 
+	 --cinza-claro: #858585;
+	
+	/* --cor-de-fundo: #003457; */
+	/* --branco: #576D8A; */
+	/* --laranja: #7C9BC2; */
+	/* --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%); */
+	/* --azul: #002F52; */
+	/* --cinza: #FFFFFF; */
+	/* --cinza-claro: #F0F0F0; */
+	/* --destaque-claro: #CEDDF5; */
+	
+	--fonte-principal: 'Poppins', sans-serif;
+	--fonte-secundaria: 'Josefin Sans', sans-serif;	
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #F1F1F1 ; /* fallback for old browsers #4466EE */
+	background: -webkit-linear-gradient(to right, #8685EF, #474554);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #474554, #8685EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: var(--fonte-principal);
+	font-size: 1rem;
+	font-weight: 400;
+	color: #FAF7FF;
+	text-decoration: none;	
+	padding: 0;
+	margin: 0;
+}
+
+.whats {
+	position: fixed; 
+	bottom: 1rem; 
+	right: 1rem;	
+	z-index: 3;
+}
+
+.whats__img {	
+	width: 90%;
+	opacity: .8;	
+}
+
+.whats__img:hover {
+	opacity: 1;	
+}
+
+a {
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+	text-decoration:none;
+	transition: box-shadow 0.3s ease-in-out;
+  }
+  
+h2 a {
+	text-decoration:none;
+	color: rgb(245, 203, 17);	
+  	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  	transition: box-shadow 0.3s ease-in-out;
+}
+
+a:hover {
+  text-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.banner-rws{
+	margin-bottom: 3rem;
+}
+
+nav.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+	padding: 0 4rem 0 4rem;
+    background-color: transparent;
+}
+
+nav.navbar-fixed.scrolled {
+    background-color: #8685EF; /* cor de fundo desejada quando a navbar for rolada */
+    box-shadow: 0 2px 4px rgba(0,0,0,.1); /* sombra para dar a impressão de que a navbar está flutuando */
+}
+
+.parallax-section {
+    height: 95vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;    
+    position: relative; /*alteração*/
+    margin: 0 0 8rem 0;
+    padding: 0;
+    opacity: .9;
+	
+}
+
+.parallax-image {    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+	right: 0;
+	bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-image: url("../img/img-02.jpg");
+    background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+    background-attachment: fixed;
+    opacity: .6;
+	transform: translate3d(0, 0, 0);
+}
+.parallax-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.parallax-text h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.parallax-text p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.parallax-section, .parallax-image, .parallax-image2, .parallax-text .parallax-text2 {
+	text-align: center;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 25px;
+	background-color: #414141;
+	color: #fff;
+	text-align: center;
+}
+
+.rodape {
+  min-height: 100%;
+  position: relative;  
+}
+
+.rodape p {
+	font-size: .8rem;
+	margin: .5rem 6rem 0 5rem;
+}
+	
+@media screen and (max-width: 991px) {
+	
+	.parallax-text {
+		margin-top: 8rem;
+		line-height: 1.15;
+	}
+	.whats {	
+		bottom: .5rem; 
+		right: .1rem;	
+		z-index: 999;
+	}
+	
+	.whats__img {		
+		width: 55%;
+	}
+		
+	nav.navbar-fixed {
+		padding: 0 1rem 0 1rem;
+	}
+			
+	h2 {
+		font-size: 1.8rem;
+		margin: 25rem 0 2rem 0;
+		padding: 0;
+		line-height: 100%;		
+	}
+	
+	.parallax-text h1 {	 
+	  margin-top: 5rem;
+	  margin-left: 1.5rem;
+	  margin-bottom: 1.5rem;
+	  margin-right: 1.5rem;	  
+	}
+
+	.parallax-text p {
+	  font-size: 1.8rem;
+	  margin-left: 1.5rem;
+	  margin-right: 1.5rem;	  
+	  margin-top: 1rem;
+	}
+			
+	.banner-rws, .banner__titulo-rws{
+		margin-top: .5rem;
+		margin-bottom: 3rem;
+		font-size: 1.6rem;
+		text-align: center;
+		margin-bottom: 1rem;
+		margin-top: 2rem;		
+	}
+	
+	.banner-rws, .banner__titulo-rws p {
+		margin-top: .5rem;
+		margin-bottom: 3rem;
+		font-size: 1.4rem;
+		text-align: center;
+		margin-bottom: 1rem;
+		margin-top: 2rem;
+	}
+	
+	.banner__texto  {
+		font-size: 1.4rem;
+		/* margin-top: 2rem; */
+		/* margin-bottom: 8rem; */
+		margin: 2rem 1rem 8rem 1rem;
+		line-height: 1.2;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.parallax-image {
+		opacity: .7;
+		height: 100vh;
+	}
+	
+	.parallax-text h1 {
+	  font-size: 6rem;
+	  text-align: right;
+	  margin-left: 5rem;
+	  margin-bottom: 2rem;
+	  margin-right: 5rem;
+	  margin-top: 10rem;
+	}
+
+	.parallax-text p {
+	  font-size: 4rem;
+	  margin-left: 6rem;
+	  margin-right: 6rem;
+	  text-align: right;
+	}
+	
+	.banner-rws { 
+		margin-bottom: 5rem;
+		font-size: 2.2rem;
+		text-align: center;
+		margin-left: 8rem;
+		margin-right: 8rem;			
+	}
+	
+	/* .banner-rws, .banner__titulo-rws{ */
+		/* margin-top: .5rem; */
+		/* margin-bottom: 3rem; */
+		/* font-size: 1.6rem; */
+		/* text-align: center; */
+		/* margin-bottom: 1rem; */
+		/* margin-top: 2rem;		 */
+	/* } */
+	
+	.banner-rws, .banner__titulo-rws p {
+		margin-top: .5rem;
+		margin-bottom: 3rem;
+		font-size: 1.4rem;
+		text-align: center;
+		margin-bottom: 1rem;
+		margin-top: 2rem;
+	}
+	
+	.banner__texto  {
+		font-size: 1.8rem;
+		/* margin-top: 2rem; */
+		/* margin-bottom: 8rem; */
+		margin: 2rem 1rem 8rem 1rem;
+	}
+}
+	
+@media screen and (min-width: 1728px) {
+	.whats {	
+		bottom: 2.5rem; 
+		right: 1.5rem;	
+		z-index: 9999;
+	}
+	
+	.whats__img {		
+		width: 110%;
+	}	
+}

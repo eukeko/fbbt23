@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">	
+	<link rel="stylesheet" href="./styles/reset.css">	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>	
+	<link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
+	<link rel="stylesheet" href="./styles/style.css">
+	<title>FBBT23</title>
+</head>
+
+<body>
+	<header>	
+		<nav class="navbar-fixed">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo">FBBT23</a>
+				<a href="#" data-activates="menu-mobile" class="button-collapse">
+					<i class="material-icons">►</i>
+				</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="./index.html">início</a></li>
+					<li><a href="./dia1.html">dia 1</a></li>
+					<li><a href="./dia2.html">dia 2</a></li>
+					<li><a href="./dia3.html">dia 3</a></li>
+					<li><a href="./atencao.html">atenção</a></li>
+					<!-- <li><a href="./fotos.html">fotos</a></li> -->
+				</ul>
+				<ul class="side-nav" id="menu-mobile">
+					<li><a href="./index.html">início</a></li>
+					<li><a href="./dia1.html">dia 1</a></li>
+					<li><a href="./dia2.html">dia 2</a></li>
+					<li><a href="./dia3.html">dia 3</a></li>
+					<li><a href="./atencao.html">atenção</a></li>
+					<!-- <li><a href="./fotos.html">fotos</a></li> -->
+				</ul>
+			</div>
+		</nav>		
+	</header>
+		
+		<section class="parallax-section">
+			<div class="parallax-image"></div>
+				<div class="parallax-text">
+					<h1>E a Febraban Tech 2023?</h1>
+					<p>Reunindo diversos parceiros de desenvolvimento e aplicação de tecnologias, o evento favorece a disseminação de informações e conhecimentos que promovem inovação com benefício à toda sociedade.</p>
+				</div>
+		</section>		
+		
+		<section class="banner-rws">
+			<h2 class="banner__titulo-rws">Entre 27 e 29 de junho a cidade da garoa recebe a <a href="https://febrabantech.com/destaques" target="_blank" rel="noopener noreferer">FEBRABAN TECH 2023</a> no Transamerica Expo Center.</h2>
+			<p class="banner__texto">A maior conferência em tecnologia que ocorre na Europa desde 2009 trata muitas agendas, entre elas a inovação, a construção de relacionamentos e de novos negócios mais sustentáveis, contribuindo para que produtos e seviços que melhorem nossa qualidade de vida sejam acessados por mais pessoas, por mais tempo, com mais eficácia e menos custo!</p>	
+		</section>
+	
+		<!-- <section id="days" class="banner"> -->
+			<!-- <h2 class="banner__titulo">E a Rio Web Summit 2023?</h2> -->
+			<!-- <p class="banner__texto">Saiba mais sobre o que muitos estão fazendo para construir nosso futuro, e siga pronto para as novas mudanças!</p> -->
+		<!-- </section> -->
+	
+	<footer>
+		<div class="rodape">
+			<p>Ação colaborativa sem vínculo.</p>
+		</div>
+]	</footer>
+	
+	<div class="whats">
+		<a class="whats__img" href="https://wa.me/5561981211905?text=Olá! Como estão hoje?" target="_blank" rel="noopener noreferer">
+		<img src="./img/whats_icon.svg" class="whats__img" alt="Ícone do Whatsapp" title="Mande pra gente sua dúvida ou sugestão!">
+		</a>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<script>
+	  var scene = document.querySelector('.parallax-section');
+	  var parallaxInstance = new Parallax(scene);
+	</script>	
+	<script>
+		$(function(){
+			$(".button-collapse").sideNav();
+		});	
+	</script>
+	<script>
+		$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();
+			if (scroll >= 50) {
+				$("nav.navbar-fixed").addClass("scrolled");
+			} else {
+				$("nav.navbar-fixed").removeClass("scrolled");
+			}
+		});
+	</script>
+	<script>
+		$(window).scroll(function() {
+			var scroll = $(window).scrollTop();
+			$('.parallax-image').css('transform', 'translate(-50%, ' + (scroll/4) + 'px)');
+		});
+	</script>
+</body>
